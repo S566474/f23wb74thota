@@ -6,8 +6,12 @@ block content
   .container-fluid
     .row
       each door in door_values
-        .col-sm-2
+        div(class="col-sm-2" onclick=`buy(${index})`)
           h3 #{door.Door_Name}
           p Color: #{door.Door_color}
           p Height: #{door.Door_height}ft
   
+  script.
+    function buy(index) {
+        alert(`You purchased : ${index}`)
+    }
