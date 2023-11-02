@@ -24,7 +24,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-app.use('/Door', DoorRouter);
+app.use('/door', DoorRouter);
 app.use('/board', boardRouter);
 app.use('/choose', chooseRouter);
 
