@@ -24,8 +24,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-app.use('/Door',DoorRouter);
-app.use('/board',boardRouter);
+app.use('/Door', DoorRouterRouter);
+app.use('/board', boardRouter);
 app.use('/choose', chooseRouter);
 
 // catch 404 and forward to error handler
