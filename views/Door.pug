@@ -1,0 +1,17 @@
+extends layout
+
+block content
+  h1= title
+  - let door =[{ Door_Name:"French door",Door_color:"white",Door_height:6ft},{ Door_Name:"Sliding door",Door_color:"blue",Door_height:5ft},{ Door_Name:"Fiberglass door",Door_color:"Brown",Door_height:6ft}]
+
+    div(class="container-fluid mt-3")
+    div(class="row")
+        each Door,index in door
+            div(class="col-sm-2 bg-primary m-1 p-3" onclick=`buy(${index})`) #{ Door.Door_Name} - #{Door.Door_color} - #{Door.Door_height}
+            
+    script.
+
+     function buy(itemNo)
+      {
+        alert(`You purchased Item ${itemNo+1}`)
+      }
